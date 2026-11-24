@@ -100,11 +100,11 @@ export function MemberDirectory({ members, onEdit, onDelete }: MemberDirectoryPr
                     <span className="member-name">{member.name}</span>
                   </div>
                 </td>
-                <td className="email-cell">{member.email}</td>
-                <td className="phone-cell">{member.phone}</td>
-                <td>{formatDate(member.birthday)}</td>
-                <td>{formatDate(member.joinedAt)}</td>
-                <td>
+                <td className="email-cell" data-label="이메일">{member.email}</td>
+                <td className="phone-cell" data-label="전화번호">{member.phone}</td>
+                <td data-label="생년월일">{formatDate(member.birthday)}</td>
+                <td data-label="가입일">{formatDate(member.joinedAt)}</td>
+                <td data-label="상태">
                   <span className={`status-badge ${member.status === '활성' ? 'status-active' : 'status-dormant'}`}>
                     <span aria-hidden="true" />{member.status}
                   </span>
